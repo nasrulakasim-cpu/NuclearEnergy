@@ -1,0 +1,241 @@
+:root {
+    --bg: #0f1720;
+    --panel: #17212b;
+    --border: #2a3644;
+    --text: #e6edf3;
+    --muted: #93a4b5;
+    --accent: #3ea6ff;
+    --green: #2ecc71;
+    --yellow: #f1c40f;
+    --red: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.site-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+    margin: 0 0 4px;
+    font-size: 1.6rem;
+}
+
+.tagline {
+    margin: 0;
+    color: var(--muted);
+}
+
+.tagline a {
+    color: var(--accent);
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.button, button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    background: var(--accent);
+    color: #05131f;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+}
+
+.stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 140px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+tr.overheating {
+    background: rgba(231, 76, 60, 0.12);
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-ONLINE {
+    background: rgba(46, 204, 113, 0.18);
+    color: var(--green);
+}
+
+.badge-MAINTENANCE {
+    background: rgba(241, 196, 15, 0.18);
+    color: var(--yellow);
+}
+
+.badge-OFFLINE {
+    background: rgba(147, 164, 181, 0.18);
+    color: var(--muted);
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.btn-toggle, .btn-delete {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+}
+
+.btn-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-delete:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.empty-row {
+    text-align: center;
+    color: var(--muted);
+}
+
+.live-note {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+    animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+}
+
+.form-row {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-row label {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.form-row input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 1rem;
+}
+
+.form-error {
+    color: var(--red);
+    font-size: 0.85rem;
+}
+
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+}
